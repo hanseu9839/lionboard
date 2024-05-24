@@ -1,0 +1,71 @@
+html {
+  height: 100%;
+}
+body {
+  background: linear-gradient(
+    142deg,
+    rgba(208, 255, 192, 1) 0%,
+    rgba(142, 254, 117, 1) 49%,
+    rgba(0, 164, 82, 1) 100%
+  );
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.section {
+  background: #effaef;
+  width: 70%;
+  heigth: 100%;
+  padding: 40px;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+.editbuttonwrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.editbutton {
+  width: 20%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 1.5rem;
+  text-align: center;
+  background: #7cd97f;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #f0f9eb;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #c3e6cb;
+  color: #155724;
+  width: 100px;
+}
