@@ -98,3 +98,20 @@ label {
 .logo-container {
     text-align: center;
 }
+
+.create-board {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+.create-board a {
+    margin-right: 10px;
+}
+
+.create-board h1 {
+    flex-grow: 1;
+    margin: 0;
+    text-align: center;
+}
