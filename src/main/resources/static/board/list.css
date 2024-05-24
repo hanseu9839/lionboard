@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    color: #333;
 }
 
 body {
@@ -17,7 +18,8 @@ body {
 }
 
 section {
-    width: 100%;
+    width: 70vw;
+    max-width: 850px;
     height: 100%;
     background: #effaef;
     padding: 30px;
@@ -40,15 +42,28 @@ th {
     text-align: center;
     width: 14.2%;
     padding: 5px;
-    border-radius: 0.2rem;
+    white-space: nowrap;
 }
 
-th {
+thead {
     background: #7cd97f;
+}
+tbody {
+    margin-top: 10px;
+}
+
+th:first-child {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+th:last-child {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 table {
-    width: 400px;
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -67,7 +82,7 @@ ul {
 .editbutton {
     width: 20%;
     padding: 10px;
-    border-radius: 1.5rem;
+    border-radius: 0.7rem;
     text-align: center;
     background: #7cd97f;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
@@ -93,4 +108,5 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
