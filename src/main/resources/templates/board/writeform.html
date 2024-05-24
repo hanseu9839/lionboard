@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Create Board</title>
-    <link rel="stylesheet" th:href="@{/css/board/style.css}" />
-    <link rel="stylesheet" href="writeform.css" />
+      <link rel="stylesheet" th:href="@{/board/writeform.css}"/>
+<!--    <link rel="stylesheet" th:href="@{board/writeform.css}" />-->
   </head>
   <body>
     <form
@@ -13,7 +13,7 @@
       method="post"
       th:object="${board}">
       <div class="logo-container">
-        <img src="techit.png" alt="Logo" class="logo" />
+        <img th:src="@{/board/techit.png}" alt="Logo" class="logo" />
       </div>
       <h1>Create Board</h1>
       <div th:if="${#fields.hasGlobalErrors()}">

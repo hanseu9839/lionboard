@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <title>Board</title>
-    <link rel="stylesheet" href="list.css"/>
+    <link rel="stylesheet" th:href="@{/board/list.css}"/>
 </head>
 <body>
 <div class="container">
     <section class="section">
         <div class="logo-container">
-            <img src="techit.png" alt="Logo" class="logo" >
+            <img th:src="@{/board/techit.png}" alt="Logo" class="logo" >
         </div>
         <div class="tables">
             <table class="table is-bordered" th:if="${!boards.empty}">

@@ -100,7 +100,7 @@ public class BoardController {
 
         boardService.delete(board);
 
-        return "redirect:list";
+        return "redirect:/list";
     }
 
 
