@@ -6,6 +6,8 @@ import lombok.Data;
 @Data
 public class BoardUpdateRequest {
 
+    private String id;
+
     @NotEmpty
     private String title;
 

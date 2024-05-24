@@ -113,10 +113,11 @@ public class BoardController {
     }
 
     @PostMapping("/update/{id}")
-    public String edit(@PathVariable Long id, @Valid @ModelAttribute("board") BoardUpdateRequest form, BindingResult bindingResult,RedirectAttributes redirectAttributes){
+    public String edit(@PathVariable Long id, @Valid @ModelAttribute("board") BoardUpdateRequest form, BindingResult bindingResult,RedirectAttributes redirectAttributes, Model model){
         Board data = boardService.findById(id);
         if(!CryptoUtil.decrypt(data.getPassword()).equals(form.getPassword())){
-            bindingResult.reject("errorPassword");
+            bindingResult.reject("passwordError", null);
+
             return "board/update";
         }
 
@@ -124,12 +125,13 @@ public class BoardController {
                 .title(form.getTitle())
                 .name(form.getName())
                 .content(form.getContent())
+                .id(id)
                 .password(CryptoUtil.encrypt(form.getPassword()))
                 .createdAt(LocalDateTime.now())
                 .updatedAt(LocalDateTime.now())
                 .build();
 
-        boardService.update(board);
+        boardService.save(board);
 
 
         redirectAttributes.addAttribute("message", "수정 완료");
