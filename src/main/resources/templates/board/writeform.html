@@ -33,7 +33,6 @@
             <input class="input" type="text" id="name" th:field="*{name}" />
           </div>
           <div class="fields-error" th:errors="*{name}"></div>
-          <br />
 
           <div class="field">
             <label class="label" for="title" th:text="#{board.title}"
@@ -42,7 +41,6 @@
             <input class="input" type="text" id="title" th:field="*{title}" />
           </div>
           <div class="fields-error" th:errors="*{title}"></div>
-          <br />
 
           <div class="field">
             <label class="label" for="content" th:text="#{board.content}"
